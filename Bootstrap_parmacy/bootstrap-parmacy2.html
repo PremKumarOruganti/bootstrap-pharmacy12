@@ -1,0 +1,521 @@
+<html>
+
+<head>
+    <title> </title>
+    <meta content="" description="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* div{
+        border:1px solid;
+    } */
+
+    #callTicketModel{
+        border: 0!important;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row pt-2">
+            <div class="col-md pl-2 ">
+                <img src="Images/SEHA LOGO.jpeg" height="50px" />
+            </div>
+            <div class="col-md-4 pl-4">
+                <div class="row">
+                    <div class="input-group mt-1">
+                        <input type="text" class="form-control" placeholder="Search Ticket....">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-primary btn-sm px-4 ">GO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+
+            </div>
+
+            <div class="col-md mt-2 ml-4 pr-2 text-right">
+                <span data-toggle="modal" data-target="#ConfigSettings"><i
+                        class="fa-solid fa-gear bg-danger bg-danger-circle text-white p-1 rounded-circle"
+                        id="sett-rig-icon"></i> Config settings</span>
+            </div>
+            <div class="col-md mt-2 pl-3 text-right">
+                <a href="dash-board.html"><i class="fa-solid fa-circle-arrow-right bg-danger text-white p-1 rounded-circle "
+                    id="sett-rig-icon"></i> <span class="text-dark">Dashboard</span></a>
+            </div>
+            <div class="col-md pt-2 ml-2 text-right"><img src="Images\user.png" class="rounded-circle" />
+                <div class="btn-group pr-2">
+                    <button type="button" class="btn btn-light btn-sm border-0 ">Samuel</button>
+                    <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split border-white "
+                        data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Log Out</a>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="shadow-none p-2 bg-light rounded"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 p-0 " class="table">
+                <div class="container-fluid border-success">
+                    <div class="row ">
+                        <div class="col-md-4 p-2 "> Not Served Ticket</div>
+                        <div class="col-md-8">
+                            <h5><span class="font-weight-bold">Average Waiting Time </span><span
+                                    class="small font-weight-lighter">(Per Person)</span><span
+                                    class="font-weight-bold  text-danger">15:02</span></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 p-2"> <i class="fa-solid fa-sm fa-clock" id="clockicon123"></i> Today</div>
+                        <div class="col-md-7 text-right pt-1"> <button type="button" class="btn btn-success btn-sm px-3" data-toggle="modal" data-target="#call-ticket-12">Call Ticket</button></div>
+
+                    </div>
+
+                </div>
+                <div class="container-fluid">
+                    <table class="table table-bordered table-striped table-sm mt-3">
+                        <tr>
+                            <th>Ticket No.</th>
+                            <th>Patient Name</th>
+                            <th>MRN No</th>
+                            <th>Date & Time</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                        <tr>
+                            <td>763648</td>
+                            <td>Steve</td>
+                            <td>578967</td>
+                            <td>Jan 17,2019</td>
+                            <td>
+                                <span class="badge badge-warning text-white">Waiting</span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>763651</td>
+                            <td>Roger</td>
+                            <td>578966</td>
+                            <td>Jan 17,2019</td>
+                            <td>
+                                <span class="badge badge-warning text-white">Waiting For Approval</span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>763649</td>
+                            <td>Amber</td>
+                            <td>578965</td>
+                            <td>Jan 17,2019</td>
+                            <td>
+                                <span class="badge badge-warning text-white">Waiting</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>763650</td>
+                            <td>23452</td>
+                            <td>578968</td>
+                            <td>Jan 17,2019</td>
+                            <td>
+                                <span class="badge badge-warning text-white">Not Turned up</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>763652</td>
+                            <td>Smith</td>
+                            <td>578957</td>
+                            <td>Jan 17,2019</td>
+                            <td>
+                                <span class="badge badge-warning text-white">Preparing Medication</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-3 p-0">
+                <div class="container-fluid">
+                    <div class="row ">
+                        <div class="col-md-12 p-2 ">Called and Ready to Dispense</div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 p-2"><i class="fa-solid fa-sm fa-clock" id="clockicon123"></i> Today</div>
+                        <div class="col-md-7 text-right pt-1"> <button type="button" class="btn btn-success btn-sm px-3" data-toggle="modal" data-target="#call-ticket-12">Call Ticket</button></div>
+
+                    </div>
+                </div>
+                <div>
+                    <table class="table table-bordered table-striped table-sm mt-3">
+
+                        <tr>
+                            <th>Ticket No.</th>
+                            <th>Patient Name</th>
+                            <th>Date & Time</th>
+                            <th>Status</th>
+
+
+                        </tr>
+
+                        <tr>
+                            <td>763668</td>
+                            <td>Steve</td>
+                            <td>Jan 17,2019</td>
+                            <td>Ready to Dispense</td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td>763669</td>
+                            <td>Amber</td>
+                            <td>Jan 17,2019</td>
+                            <td>Ready to Dispense</td>
+
+
+                        </tr>
+
+
+                    </table>
+                </div>
+
+
+            </div>
+            <div class="col-md-3 p-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md p-2">Parked Tickets</div>
+                        <div class="col-md"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 p-2"><i class="fa-solid fa-sm fa-clock" id="clockicon123"></i> Today</div>
+                        <div class="col-md-8 text-right pt-1"><button type="button" class="btn btn-danger btn-sm px-3"
+                                data-toggle="modal" data-target="#Call-parked-ticket">Call Parked Ticket</button></div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <table class="table table-bordered table-striped table-sm mt-3 ">
+
+                        <tr>
+                            <th>Ticket No.</th>
+                            <th>Patient Name</th>
+                            <th>Date & Time</th>
+                            <th>Status</th>
+
+
+                        </tr>
+
+                        <tr>
+                            <td>763668</td>
+                            <td>Steve</td>
+                            <td>Jan 17,2019</td>
+                            <td>Not Turned up</td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td>763669</td>
+                            <td>Amber</td>
+                            <td>Jan 17,2019</td>
+                            <td>Waiting For Approval</td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td>763650</td>
+                            <td>Michael</td>
+                            <td>Jan 17,2019</td>
+                            <td>Preparing Medication</td>
+
+
+                        </tr>
+
+
+                    </table>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MODELS -->
+
+    <!-- ConfigSettings-->
+
+    <!-- The Modal -->
+    <div class="modal" id="ConfigSettings">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white text-left">Configure User Preference Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td rowspan="3" class="col-md-6">Select Type of Tickets to Handel</td>
+                            <td class="col-md-6 py-0">
+                                <form>
+                                    <div class="custom-control custom-checkbox ">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck"
+                                            name="example1">
+                                        <label class="custom-control-label" for="customCheck">Thiqa</label>
+                                    </div>
+                                </form>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="py-0">
+                                <form>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck"
+                                            name="example1">
+                                        <label class="custom-control-label" for="customCheck">Non-Thiqa</label>
+                                    </div>
+                                </form>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="py-0">
+                                <form>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck"
+                                            name="example1">
+                                        <label class="custom-control-label" for="customCheck">Senior Citizens</label>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-md-7 text-right">
+                                <button type="button" class="btn btn-primary px-5 py-1 badge-pill"
+                                    data-dismiss="modal">Save</button>
+                            </div>
+
+                            <div class="col-md-5 text-left">
+                                <button type="button" class="btn btn-danger px-5 py-1 badge-pill"
+                                    data-dismiss="modal">Cancel</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!--Call-parket-ticket-->
+
+    <div class="modal" id="Call-parked-ticket">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header bg-primary text-white">
+                    <h4 class="modal-title ">Ticket Details(763648) &nbsp; - &nbsp;&nbsp;</h4> <button type="button"
+                        class="btn btn-warning text-white">In Progress</button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <table class="table table-sm">
+                            <thead>
+                                <h5 class="text-secondary">Patient Details</h5>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MRN number</td>
+                                    <td>:</td>
+                                    <td>5489675</td>
+                                </tr>
+                                <tr>
+                                    <td>Patient Name</td>
+                                    <td>:</td>
+                                    <td>Mr.Mohammed Zabi</td>
+                                </tr>
+                                <tr>
+                                    <td>Prescribed by Dr</td>
+                                    <td>:</td>
+                                    <td>Dr. M. Viswanathan</td>
+                                </tr>
+                                <tr>
+                                    <td>Date Prescribed</td>
+                                    <td>:</td>
+                                    <td>Jan 16 2019 09:35</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <br>
+
+                        <div class="container">
+                            <h5 class="text-secondary">Prescription Details</h5>
+                            <table class="table table-bordered table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Medicine Name</th>
+                                        <th>Quantity</th>
+                                        <th>Usage</th>
+                                        <th>Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Aspirin</td>
+                                        <td>20</td>
+                                        <td>1-0-1</td>
+                                        <td>10 Days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Pentasa 500 mg</td>
+                                        <td>180</td>
+                                        <td>1-1-1</td>
+                                        <td>60 Days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Fol 123</td>
+                                        <td>20</td>
+                                        <td>0-0-1</td>
+                                        <td>20 Days</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button type="button"
+                                    class="btn btn-primary px-5 badge-pill text-white">Call&nbsp;Again</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button"
+                                    class="btn btn-success px-5 badge-pill text-white">Dispense</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button"
+                                    class="btn btn-warning px-3 badge-pill text-white">Preparing&nbsp;Medicine</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-danger px-3 badge-pill text-white">Patient
+                                    Declined</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row pb-3">
+                        <div class="col-md">
+
+                        </div>
+                        <div class="col-md-3 pl-2 ml-2">
+                            <button type="button"
+                                class="btn btn-warning px-4 badge-pill text-white">Waiting&nbsp;For&nbsp;Approval</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button"
+                                class="btn btn-warning px-4 badge-pill text-white">Ready&nbsp;For&nbsp;Dispense</button>
+                        </div>
+                        <div class="col-md-3 pr-5">
+                            <button type="button"
+                                class="btn btn-danger px-5 badge-pill text-white">Not&nbsp;Turned&nbsp;Up</button>
+                        </div>
+                        <div class="col-md">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!--Call-ticket-->
+
+    <!-- The Modal -->
+    <div class="modal fade" id="call-ticket-12">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content border-0">
+
+                <!-- Modal body -->
+                <div class="modal-body bg-success" >
+                    <span class="text-white"><i class="fa-solid fa-check"></i> Ticket Served Successfully</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
